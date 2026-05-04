@@ -308,7 +308,38 @@
                 Entre em contato conosco e solicite um orçamento sem compromisso.
                 Nossa equipe está pronta para atendê-lo.
             </p>
-            <a href="index.php#contact" class="btn btn-white">Solicitar Orçamento</a>
+            <a href="#" onclick="loadPHP(event, 'index.php', 'contact')" class="btn btn-white">
+				Solicitar Orçamento
+			</a>
+			
+			<!-- Para testar -->
+			<pre id="output"></pre>
+			<pre id="error"></pre>
+			<script type="module">
+			import { PhpWeb } from "https://cdn.jsdelivr.net/npm/php-wasm/PhpWeb.mjs";
+
+			const php = new PhpWeb();
+
+			window.loadPHP = async function(event, file, anchor = null) {
+			  event.preventDefault();
+
+			  document.getElementById("output").textContent = "";
+			  document.getElementById("error").textContent = "";
+
+			  const code = await fetch(file).then(r => r.text());
+
+			  const result = await php.run(code);
+
+			  document.getElementById("output").textContent = result;
+
+			  if (anchor) {
+				setTimeout(() => {
+				  const el = document.getElementById(anchor);
+				  if (el) el.scrollIntoView({ behavior: "smooth" });
+				}, 100);
+			  }
+			};
+			</script>
         </div>
     </section>
 

@@ -26,32 +26,25 @@
                     <p class="nav-divider">|</p>
                     <a href="#" class="nav-link" onclick="loadPHP(event, 'php/account.php')">Conta</a>
 					<!-- Para teste -->
-					<script async type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/php-wasm/php-tags.jsdelivr.mjs"></script>
 					<pre id="output"></pre>
 					<pre id="error"></pre>
-					<script>
-					async function loadPHP(event, file) {
-						event.preventDefault();
+					<script type="module">
+					import { PhpWeb } from "https://cdn.jsdelivr.net/npm/php-wasm/PhpWeb.mjs";
 
-						// limpa saída anterior (opcional, mas útil)
-						document.getElementById("output").textContent = "";
-						document.getElementById("error").textContent = "";
+					const php = new PhpWeb();
 
-						const script = document.createElement("script");
-						script.type = "text/php";
-						script.src = file;
-						script.setAttribute("data-stdout", "#output");
-						script.setAttribute("data-stderr", "#error");
+					window.loadPHP = async function(event, file) {
+					  event.preventDefault();
 
-						document.body.appendChild(script);
+					  document.getElementById("output").textContent = "";
+					  document.getElementById("error").textContent = "";
 
-						// 🔥 ESSENCIAL: reprocessar scripts PHP
-						if (window.phpTags) {
-							await window.phpTags.run();
-						} else {
-							console.error("phpTags ainda não carregou");
-						}
-					}
+					  const code = await fetch(file).then(r => r.text());
+
+					  const result = await php.run(code);
+
+					  document.getElementById("output").textContent = result;
+					};
 					</script>
 
                 </nav>
