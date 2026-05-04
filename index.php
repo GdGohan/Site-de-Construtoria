@@ -26,6 +26,7 @@
                     <p class="nav-divider">|</p>
                     <a href="#" class="nav-link" onclick="loadPHP(event, 'php/account.php')">Conta</a>
 					<!-- Para teste -->
+					<script async type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/php-wasm/php-tags.jsdelivr.mjs"></script>
 					<script>
 					function loadPHP(event, file) {
 						event.preventDefault();
