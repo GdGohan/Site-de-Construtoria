@@ -24,7 +24,22 @@
                     <a href="projects.html" class="nav-link">Projetos</a>
                     <a href="#contact" class="nav-link">Contato</a>
                     <p class="nav-divider">|</p>
-                    <a href="php/account.php" class="nav-link">Conta</a>
+                    <a href="php/account.php" class="nav-link" onclick="loadPHP(event, 'php/account.php')">Conta</a>
+					<!-- Para teste -->
+					<script>
+					function loadPHP(event, file) {
+						event.preventDefault();
+
+						const script = document.createElement("script");
+						script.type = "text/php";
+						script.src = file;
+						script.setAttribute("data-stdout", "#output");
+						script.setAttribute("data-stderr", "#error");
+
+						document.body.appendChild(script);
+					}
+					</script>
+
                 </nav>
                 
                 <!-- Mobile Menu Button -->

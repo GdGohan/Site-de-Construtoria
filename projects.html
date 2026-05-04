@@ -628,7 +628,38 @@
                 Estamos prontos para transformar sua ideia em realidade. 
                 Entre em contato e vamos conversar sobre seu projeto.
             </p>
-            <a href="index.php#contact" class="btn btn-white">Fale Conosco</a>
+			<a href="#" class="btn btn-white" onclick="loadPHP('index.php', 'contact')">
+				Fale Conosco
+			</a>
+            
+			<!-- Para testar -->
+			<script>
+			async function loadPHP(file, anchor = null) {
+				const response = await fetch(file);
+				const code = await response.text();
+
+				const script = document.createElement("script");
+				script.type = "text/php";
+				script.text = code;
+				script.setAttribute("data-stdout", "#output");
+				script.setAttribute("data-stderr", "#error");
+
+				document.body.innerHTML = `
+					<div id="output"></div>
+					<div id="error"></div>
+				`;
+
+				document.body.appendChild(script);
+
+				// espera um pouco e rola até a âncora
+				if (anchor) {
+					setTimeout(() => {
+						const el = document.getElementById(anchor);
+						if (el) el.scrollIntoView({ behavior: "smooth" });
+					}, 300);
+				}
+			}
+			</script>
         </div>
     </section>
 

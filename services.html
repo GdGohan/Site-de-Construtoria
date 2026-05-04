@@ -15,14 +15,28 @@
                     <div class="logo-icon"></div>
                     <span class="logo-text">Campos</span>
                 </div>
-                
-                <a href="index.php" class="back-link">
+
+				<a href="index.php" class="back-link" onclick="loadPHP(event, 'index.php')">
                     <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="19" y1="12" x2="5" y2="12"></line>
                         <polyline points="12 19 5 12 12 5"></polyline>
                     </svg>
                     Voltar ao Início
                 </a>
+				<!-- Para teste -->
+				<script>
+				function loadPHP(event, file) {
+					event.preventDefault();
+
+					const script = document.createElement("script");
+					script.type = "text/php";
+					script.src = file;
+					script.setAttribute("data-stdout", "#output");
+					script.setAttribute("data-stderr", "#error");
+
+					document.body.appendChild(script);
+				}
+				</script>
             </div>
         </div>
     </header>
