@@ -30,8 +30,12 @@
 					<pre id="output"></pre>
 					<pre id="error"></pre>
 					<script>
-					function loadPHP(event, file) {
+					async function loadPHP(event, file) {
 						event.preventDefault();
+
+						// limpa saída anterior (opcional, mas útil)
+						document.getElementById("output").textContent = "";
+						document.getElementById("error").textContent = "";
 
 						const script = document.createElement("script");
 						script.type = "text/php";
@@ -40,6 +44,13 @@
 						script.setAttribute("data-stderr", "#error");
 
 						document.body.appendChild(script);
+
+						// 🔥 ESSENCIAL: reprocessar scripts PHP
+						if (window.phpTags) {
+							await window.phpTags.run();
+						} else {
+							console.error("phpTags ainda não carregou");
+						}
 					}
 					</script>
 

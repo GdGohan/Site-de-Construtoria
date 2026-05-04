@@ -637,29 +637,26 @@
 			<pre id="error"></pre>
 			<script async type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/php-wasm/php-tags.jsdelivr.mjs"></script>
 			<script>
-			async function loadPHP(file, anchor = null) {
-				const response = await fetch(file);
-				const code = await response.text();
+			async function loadPHP(event, file) {
+				event.preventDefault();
+
+				// limpa saída anterior (opcional, mas útil)
+				document.getElementById("output").textContent = "";
+				document.getElementById("error").textContent = "";
 
 				const script = document.createElement("script");
 				script.type = "text/php";
-				script.text = code;
+				script.src = file;
 				script.setAttribute("data-stdout", "#output");
 				script.setAttribute("data-stderr", "#error");
 
-				document.body.innerHTML = `
-					<div id="output"></div>
-					<div id="error"></div>
-				`;
-
 				document.body.appendChild(script);
 
-				// espera um pouco e rola até a âncora
-				if (anchor) {
-					setTimeout(() => {
-						const el = document.getElementById(anchor);
-						if (el) el.scrollIntoView({ behavior: "smooth" });
-					}, 300);
+				// 🔥 ESSENCIAL: reprocessar scripts PHP
+				if (window.phpTags) {
+					await window.phpTags.run();
+				} else {
+					console.error("phpTags ainda não carregou");
 				}
 			}
 			</script>
