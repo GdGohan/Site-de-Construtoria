@@ -1,0 +1,123 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 30 de abr. de 2026, 11:54:40
+    Author     : aluno
+*/
+
+/* Reset básico */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(12, 12, 234, 0.6), rgba(74, 74, 255, 0.6)),
+        url('../../images/fundo.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Centralizar tudo */
+.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Caixa principal */
+.form-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos */
+.form-box h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Separar os formulários */
+.form-box form {
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Foco */
+.form-box input:focus {
+    border-color: #0c0cea;
+}
+
+/* Botões */
+.form-box button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #0c0cea;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover */
+.form-box button:hover {
+    background: #0909b8;
+}
+
+h2 {
+    text-align: center;
+}
+
+.logo-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-image: url('../../images/logo_alt.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 10px;
+}
+
+/* estilo igual h2 */
+.logo-text {
+    font-size: 1.5rem; /* tamanho típico de h2 */
+    font-weight: 600;
+    margin: 0;
+}

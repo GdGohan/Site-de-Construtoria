@@ -102,14 +102,14 @@ button {
 .icon-check {
     width: 1.25rem;
     height: 1.25rem;
-    color: #ea580c;
+    color: #0c0cea;
     flex-shrink: 0;
 }
 
 .icon-service {
     width: 3rem;
     height: 3rem;
-    color: #ea580c;
+    color: #0c1eea;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
 }
@@ -117,7 +117,7 @@ button {
 .icon-contact {
     width: 2rem;
     height: 2rem;
-    color: #ea580c;
+    color: #100cea;
     margin-bottom: 0.75rem;
 }
 
@@ -135,12 +135,12 @@ button {
 }
 
 .btn-primary {
-    background-color: #ea580c;
+    background-color: #220cea;
     color: #ffffff;
 }
 
 .btn-primary:hover {
-    background-color: #c2410c;
+    background-color: #2a0cc2;
 }
 
 .btn-secondary {
@@ -155,7 +155,7 @@ button {
 
 .btn-white {
     background-color: #ffffff;
-    color: #ea580c;
+    color: #4b0cea;
 }
 
 .btn-white:hover {
@@ -187,11 +187,14 @@ button {
 .logo-icon {
     width: 3rem;
     height: 3rem;
-    background-color: #ea580c;
+    border-radius: 5%;
+    background-image: url('./images/logo.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
     font-weight: 600;
 }
 
@@ -214,7 +217,7 @@ button {
 }
 
 .nav-link:hover {
-    color: #ea580c;
+    color: #0c26ea;
 }
 
 .nav-mobile {
@@ -229,7 +232,12 @@ button {
 }
 
 .nav-link-mobile:hover {
-    color: #ea580c;
+    color: #0c10ea;
+}
+
+.nav-divider {
+    color: #6b7280;
+    margin: 0 10px;
 }
 
 .menu-toggle {
@@ -251,7 +259,7 @@ button {
 }
 
 .back-link:hover {
-    color: #ea580c;
+    color: #0c1eea;
 }
 
 /* Hero Section */
@@ -342,6 +350,7 @@ button {
 
 .features-list {
     margin-bottom: 2rem;
+    color:rgb(37, 10, 239);
 }
 
 .feature-item {
@@ -349,6 +358,7 @@ button {
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
+    color:rgb(37, 10, 239);
 }
 
 .about-image img {
@@ -378,7 +388,7 @@ button {
 }
 
 .stat-card .icon-lg {
-    color: #ea580c;
+    color: #3c0cea;
     margin: 0 auto 1rem;
 }
 
@@ -421,7 +431,7 @@ button {
 }
 
 .service-card:hover {
-    border-color: #ea580c;
+    border-color: #260cea;
 }
 
 .service-card:hover .icon-service {
@@ -486,7 +496,7 @@ button {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background-color: #ea580c;
+    background-color: #0c22ea;
     color: #ffffff;
     padding: 0.25rem 1rem;
     font-size: 0.875rem;
@@ -540,7 +550,7 @@ button {
 }
 
 .info-card a:hover {
-    color: #ea580c;
+    color: #400cea;
 }
 
 .contact-form-container {
@@ -585,7 +595,7 @@ button {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #ea580c;
+    border-color: #4b0cea;
 }
 
 .form-group textarea {
@@ -617,6 +627,7 @@ button {
 .social-links {
     display: flex;
     gap: 1rem;
+    color: rgb(37, 10, 239);
 }
 
 .social-link {
@@ -630,7 +641,7 @@ button {
 }
 
 .social-link:hover {
-    background-color: #ea580c;
+    background-color: #2d0cea;
 }
 
 .social-link svg {
@@ -662,7 +673,7 @@ button {
 }
 
 .footer-links a:hover {
-    color: #ea580c;
+    color: #100cea;
 }
 
 .footer-services ul li {
@@ -677,7 +688,7 @@ button {
 }
 
 .footer-contact-item .icon-sm {
-    color: #ea580c;
+    color: #400cea;
     margin-top: 0.25rem;
 }
 
@@ -687,7 +698,7 @@ button {
 }
 
 .footer-contact-item a:hover {
-    color: #ea580c;
+    color: #470cea;
 }
 
 .footer-bottom {
@@ -715,7 +726,7 @@ button {
 }
 
 .service-detail-content .icon-xl {
-    color: #ea580c;
+    color: #650cea;
     margin-bottom: 1.5rem;
 }
 
@@ -812,7 +823,7 @@ button {
 }
 
 .info-item .icon-sm {
-    color: #ea580c;
+    color: #2d0cea;
 }
 
 .project-stats {
@@ -852,7 +863,7 @@ button {
 }
 
 .project-performance h3 .icon-sm {
-    color: #ea580c;
+    color: #4b0cea;
 }
 
 .performance-list {
@@ -871,7 +882,7 @@ button {
     content: "";
     width: 0.5rem;
     height: 0.5rem;
-    background-color: #ea580c;
+    background-color: #0c1eea;
     border-radius: 50%;
     margin-top: 0.5rem;
     flex-shrink: 0;
@@ -920,7 +931,7 @@ button {
 }
 
 .project-map h3 .icon-md {
-    color: #ea580c;
+    color: #560cea;
 }
 
 .map-container {
@@ -934,7 +945,7 @@ button {
 /* CTA Section */
 .cta-section {
     padding: 5rem 0;
-    background-color: #ea580c;
+    background-color: #4f0cea;
     text-align: center;
 }
 
@@ -948,6 +959,47 @@ button {
     max-width: 42rem;
     margin: 0 auto 2rem;
 }
+
+
+
+
+
+.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+.form-box {
+    display: flex;
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+}
+
+
+
 
 /* Responsive Design */
 @media (min-width: 768px) {
