@@ -24,7 +24,7 @@
                     <a href="projects.html" class="nav-link">Projetos</a>
                     <a href="#contact" class="nav-link">Contato</a>
                     <p class="nav-divider">|</p>
-                    <a href="php/account.php" class="nav-link" onclick="loadPHP(event, 'php/account.php')">Conta</a>
+                    <a href="#" class="nav-link" onclick="loadPHP(event, 'php/account.php')">Conta</a>
 					<!-- Para teste -->
 					<script>
 					function loadPHP(event, file) {
