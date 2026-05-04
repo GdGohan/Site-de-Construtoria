@@ -27,6 +27,8 @@
                     <a href="#" class="nav-link" onclick="loadPHP(event, 'php/account.php')">Conta</a>
 					<!-- Para teste -->
 					<script async type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/php-wasm/php-tags.jsdelivr.mjs"></script>
+					<pre id="output"></pre>
+					<pre id="error"></pre>
 					<script>
 					function loadPHP(event, file) {
 						event.preventDefault();
